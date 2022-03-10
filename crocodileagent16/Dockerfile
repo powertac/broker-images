@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-slim
-WORKDIR /opt/powertac/broker
+WORKDIR /powertac/broker
 
 RUN apt-get update \
     && apt-get -y install --no-install-recommends build-essential r-base r-base-dev wget \
@@ -17,5 +17,5 @@ RUN wget http://www.powertac.org/wiki/images/0/0d/CrocodileAgent16.zip \
 COPY rserve.r .
 COPY crocodileagent16.sh .
 
-ENV BROKER_JAR_PATH=/opt/powertac/broker/CrocodileAgent.jar
+ENV BROKER_JAR_PATH=/powertac/broker/CrocodileAgent.jar
 ENTRYPOINT ["/powertac-agent/crocodileagent16.sh"]
