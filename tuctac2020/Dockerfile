@@ -1,3 +1,4 @@
+# TODO : move to https://hub.docker.com/_/eclipse-temurin
 FROM openjdk:11-jre-slim
 WORKDIR /powertac/broker
 
